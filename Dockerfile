@@ -1,5 +1,5 @@
 FROM golang:latest
-LABEL base.name="golangtest"
+LABEL base.name="go-api"
 
 WORKDIR '/app'
 COPY . .
