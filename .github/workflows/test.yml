@@ -1,0 +1,17 @@
+name: Run tests
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest repo
+        uses: actions/checkout@v2
+      
+      - name: Build tests
+        run: docker build -t tests -f Dockerfile.test .
+      
+      - name: Run tests
+        run: docker run tests
