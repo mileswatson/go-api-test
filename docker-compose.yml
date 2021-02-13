@@ -1,6 +1,7 @@
 version: '3'
 services:
   deployment:
+    container_name: go-api
     build:
       context: .
       dockerfile: Dockerfile
