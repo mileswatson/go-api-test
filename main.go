@@ -17,6 +17,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func calculate(x int) int {
-	result := x + 2
+	result := x + 3
 	return result
 }
