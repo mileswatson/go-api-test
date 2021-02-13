@@ -10,11 +10,8 @@ jobs:
       - name: Checkout Latest Repo
         uses: actions/checkout@master
       
-      - name: Build tests
-        run: docker build -t tests -f Dockerfile.test .
-      
       - name: Run tests
-        run: docker run tests
+        run: docker-compose -f docker-compose-test.yml up
 
       - name: Generate Deployment Package
         run: zip -r deploy.zip *
